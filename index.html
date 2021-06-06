@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function call_query()
+        {
+            alert("Thank you for your submission! We will get back to you soon!");
+        }
+    </script>
+  <title>Bootstrap Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<style>
+    body{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color:gold;
+        background-image: url(https://image.freepik.com/free-photo/dark-blue-plain-wall-background_53876-92976.jpg);
+    }
+    .h2{
+        text-align: center;
+        font-family:cursive;
+        color:greenyellow;
+    }
+    a.fb{
+        
+        color: purple;
+        
+        
+    }
+    a.insta{
+        
+        color: red;
+        
+    }
+    a.mail{
+        
+        color: orange;
+        /* margin-left: 45%; */
+        
+    }
+    .center{
+        text-align:center;
+        width: 30%;
+    }
+    .foot{
+        background-color: yellow;
+        text-align: center;
+        color:black;
+        
+    }
+</style>
+<body>
+    <form class="needs-validation" novalidate>
+    <div class="container">
+        <h2 class="h2"> Enrollment Form</h2>
+        <div class="form-group">
+            <label for="name">Enter your Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
+            
+        </div>
+        <div class="form-group">
+            <label for="email">Enter your Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+            
+            
+        </div>
+        <div class="form-group">
+            <label for="num">Enter your phone number</label>
+            <input type="number" class="form-control" id="num" placeholder="Enter phone number" name="ph.no" required>
+        </div>
+        <div class="form-group">
+            <label for="bday">Please enter your Date of Birth</label>
+            <input type="date" class="form-control" id="bday">
+        </div>
+        <div class="form-group">
+            <label for="role">Which option best describes your role?</label>
+            <select class="form-control" id="role">
+                <option value="" disabled selected required>Select current role</option>
+                <option value="Student">Student</option>
+                <option value="Graduate">Graduate</option>
+                <option value="Lecturer">Lecturer</option>
+                <option value="Self">Self Employed</option>
+                <option value="Govt">Govt Employee</option>
+                <option value="Pvt">Private Employee</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <label for="course" id="course">Which course would u like to join? </label>
+        <div class="form-check">
+            
+            <input class="form-check-input" type="radio" name="course" id="course1" value="1">
+            <label class="form-check-label" for="course1">
+                ReactJS
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="course" id="course2" value="2">
+            <label class="form-check-label" for="course2">
+                KOTLIN
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="course" id="course3" value="3">
+            <label class="form-check-label" for="course3">
+                AI and ML With Python
+            </label>
+        </div><br>
+        <label for="languages" id="languages">Which programming languages do you already know?</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="lang1">
+            <label class="form-check-label" for="lang1">
+                C
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="lang2">
+            <label class="form-check-label" for="lang2">
+                C++
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="lang3">
+            <label class="form-check-label" for="lang3">
+                Python
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="lang4">
+            <label class="form-check-label" for="lang4">
+                Java
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="lang5">
+            <label class="form-check-label" for="lang5">
+                JavaScript
+            </label>
+        </div><br>
+        <div class="form-group">
+            <label for="time-slot">Preffered Time Slots for Classes?</label>
+            <select style="padding: 10px; font-size: large;" multiple class="form-control" id="time-slot">
+                <option>9AM-11AM<br></option>
+                <option>12PM-2PM<br></option>
+                <option>2PM-4PM<br></option>
+                <option>4PM-6PM</option>
+                <option>6PM-8PM</option>
+            </select>
+        </div><br>
+        <div class="form-group">
+            <label for="expect">What do you expect from us?</label>
+            <textarea id="expect" class="form-control" id="expect" rows="5" placeholder="Write here...."></textarea>
+        </div>
+        <button  type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+        
+    </form></div><br>
+    <!-- <div class="container-fluid"> -->
+        <a class="mail" href="mailto:gauravgovindbachani@gmail.com" target="_blank"><i class="fa fa-envelope center" style="font-size:30px"></i></a>
+        <a class="fb" href="https://www.facebook.com/profile.php?id=100008115974363 " target="_blank"><i class="fab fa-facebook-f center" style="font-size:30px;"></i></a>
+        <a class="insta" href="https://www.instagram.com/gauravbachani/?hl=en " target="_blank"><i class="fab fa-instagram center" style="font-size:30px"></i></a>
+    
+</div>
+</body>
+<footer class="foot">
+    <p class="contextf"><b><span class="glyphicon glyphicon-copyright-mark"></span> <b>Copyright 2021 GAURAV BACHANI. All rights reserved</b></p><br>
+</footer>
+</html>
